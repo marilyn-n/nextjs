@@ -5,7 +5,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
 import Link from 'next/link';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -22,12 +21,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navbar = () => {
-    const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+const classes = useStyles();
+  const [value, setValue] = React.useState(0);
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
     return ( 
         <>
@@ -37,20 +36,16 @@ const Navbar = () => {
                         NextJS
                     </Typography>
                     <Tabs
+                        className={classes.root}
                         value={value}
                         onChange={handleChange}
                         indicatorColor="secondary"
                         textColor="light"
-                    >
-                        <Link href="/">
-                            <Tab label="Home" />
-                        </Link>
-                        <Link href="/">
-                            <Tab label="About" />
-                        </Link>
-                        <Link href="/">
-                            <Tab label="Contact" />
-                        </Link>
+                        centered
+                    >   
+                        <Tab label="Home" />
+                        <Tab label="About" />
+                        <Tab label="Form" />
                     </Tabs>
                     <Button
                         startIcon={<FavoriteIcon />}
