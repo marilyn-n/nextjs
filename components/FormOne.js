@@ -2,14 +2,24 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+    paper: {
+      padding: theme.spacing(2),
+      color: theme.palette.text.secondary,
+    },
+  }));
+
 const Form = () => {
+    const classes = useStyles();
 
     return ( 
         <>
-            <Paper elevation={3} className="paper-container">
+            <Paper elevation={3} className={classes.paper}>
                 <Grid container spacing={3}>
                     <Grid item xs={4}>
                         <TextField
@@ -50,7 +60,7 @@ const Form = () => {
                         />
                     </Grid>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid container xs={12}>
                     <TextField
                         fullWidth
                         id="standard-size-small"

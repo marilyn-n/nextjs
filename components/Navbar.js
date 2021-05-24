@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Link from 'next/link';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Avatar from '@material-ui/core/Avatar';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,9 +33,7 @@ const classes = useStyles();
         <>
             <AppBar position="static">
                 <Toolbar variant="dense">
-                    <Typography variant="h6" color="inherit">
-                        NextJS
-                    </Typography>
+                    <img className="nav-logo" src="/nextjs.png"/>
                     <Tabs
                         className={classes.root}
                         value={value}
@@ -56,6 +55,10 @@ const classes = useStyles();
                         >
                         Link
                     </Button>
+                    <Avatar 
+                        alt="Next User" 
+                        src="/user.JPG" 
+                        style={{ marginLeft: 8 }}/>
                 </Toolbar>
             </AppBar>
         </>

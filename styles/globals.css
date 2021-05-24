@@ -6,6 +6,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.nav-logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: .5rem;
+  margin-right: 2rem;
+}
+
 /* headers */
 
 h5 {
@@ -31,3 +38,4 @@ footer {
 .paper-container {
   padding: 1.25rem; 
 }
+
